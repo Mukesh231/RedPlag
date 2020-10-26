@@ -1,0 +1,24 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">Log Out</a></p>
+  <p><a href="{% url 'change_password' %}">Change Password</a></p>
+  <form action='/file/' method="POST" enctype="multipart/form-data" >
+    {%csrf_token%}
+    <!-- {{form.non_field_errors}}
+    {{form.as_p}} -->
+    <input type='file' name='upfile'>
+    <input type='submit' value='upload' >
+</form>
+{% else %}
+  <p>Please log in to continue</p>
+  <a href="{% url 'login' %}">Log In</a>
+  <p>Don't have an account yet?</p>
+  <a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+{% endblock %}

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'api',
     'corsheaders',
     'fileupload',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -147,3 +148,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 CORS_ORIGIN_WHITELIST=[
     "http://localhost:4200"
 ]
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
+
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))

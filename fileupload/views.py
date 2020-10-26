@@ -11,8 +11,6 @@ import zipfile
 #from .forms import FileUploadForm
 
 def form_upload(request):
-    if request.method=='GET':
-        return render(request, 'file.html',)
     if request.method=="POST":
         file=request.FILES['upfile']
         #st='haii'
