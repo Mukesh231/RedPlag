@@ -1,4 +1,4 @@
-from django.contrib import admin
-from .models import FILE
+# from django.contrib import admin
+# from .models import FILE
 
-admin.site.register(FILE)
+# admin.site.register(FILE)
