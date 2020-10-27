@@ -7,11 +7,10 @@
     {% if user.is_authenticated %}
     <h2>Please Logout this session to Sign Up a new account.</h2>
     {% else %}
-    <h2>Sign up Form</h2>
-<form method="post">
+  <form method="post">
   {% csrf_token %}
   <fieldset class="form-group">
-    <legend class="border-bottom mb-4">Join Today</legend>
+    <legend class="border-bottom mb-4" style="font-size: 25px">User Sign up Form</legend>
   {% for field in form %}
     <p>
       {{ field.label_tag }}<br>
