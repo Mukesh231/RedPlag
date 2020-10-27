@@ -4,12 +4,35 @@
     <head>
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
         <title>Home</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
     </head>
 
     <body>
-        <button><a href={{url}}>Download</a></button><br>
-        <button><a href="{% url 'home' %}">Upload another file</a></button>
+        <header class="site-header">
+            <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+              <div class="container">
+                <a class="navbar-brand mr-4" href="/home">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand mr-4" href="/logout">Log Out</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </div>
+            </nav>
+          </header>
+          <div class="horizontal-center">
+              <div class="vertical-center">
+                <button class="buttonlamb button1lamb"><a href={{url}}>Download</a></button><br>
+                        
+                <button class="buttonlamb button1lamb"><a href="{% url 'home' %}">Upload Another File</a></button>
+
+
+                </div>
+            </div>
+                        
     </body>
 </html>

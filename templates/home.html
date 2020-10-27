@@ -16,8 +16,8 @@
     {%csrf_token%}
     <!-- {{form.non_field_errors}}
     {{form.as_p}} -->
-    <input type='file' name='file'>
-    <input type='submit' value='upload' >
+    <input type='file' accept=".zip" name='file' required="true">
+    <input type='submit' value='Upload' >
 </form>
 	{% else %}
   <p>Please log in to continue</p>
