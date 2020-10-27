@@ -8,20 +8,26 @@
     {% if title %}
         <title>legi0n - {{ title }}</title> 
     {% else %}
-        <title>legi0n</title>
+        <title>Plagarism Checker
+
+</title>
     {% endif %}
   </head>
   <body>
-    <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-        <div class="container">
-          <a class="navbar-brand mr-4" href="/login">Sign In</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand mr-4" href="/signup">Sign Up</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <header class="site-header" >
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top" style="background-color: #6B5B95">
+        <div class="container" >
+          <p class="navbar-nav", style="font-size: 20px; color: white">Plagarism Checker</p>
+          <div class="navbar-nav">
+              {% if user.is_authenticated %}
+                <a class="nav-item nav-link" href="/home">Home</a>
+                <a class="nav-item nav-link" href="/logout">Logout</a>
+              {% else %}
+                <a class="nav-item nav-link" href="/signup">Sign Up</a>
+                <a class="nav-item nav-link" href="/login">Sign In</a>
+              {% endif %}
+            </div>
+          
         </div>
       </nav>
     </header>
@@ -39,46 +45,53 @@
       {% endblock %}
     </div>
     <div class="col-md-4">
-            <div class="about-section">
-            <h2 style="text-align:center">Our Team</h2>
+            <div class="about-section" style="padding: 30px;background-color: #92A8D1 " >
+            <h2 style="text-align:center">Developers :</h2>
           </div>
-<div class="row">
-  <div class="row">
-    <div class="card">
-      <div class="container">
-        <h2>Jane Doe</h2>
-        <p class="title">CEO & Founder</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>jane@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
+
 
   <div class="row">
-    <div class="card">
-      <div class="container">
-        <h2>Mike Ross</h2>
+    <div class="card" style="margin-left: 14px">
+      <div class="container" style="margin: 0px 103px 0px 4px">
+        <h2>Mukesh Reddy</h2>
         <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>mike@example.com</p>
-        <p><button class="button">Contact</button></p>
       </div>
     </div>
   </div>
 
   <div class="row ">
-    <div class="card">
-      <div class="container">
-        <h2>John Doe</h2>
+    <div class="card" style="margin-left: 14px">
+      <div class="container" style="margin: 0px 97px 0px 4px">
+        <h2>Heemmanshuu</h2>
         <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>john@example.com</p>
-        <p><button class="button">Contact</button></p>
       </div>
     </div>
   </div>
 </div>
+  <div class="row ">
+    <div class="card" style="margin-left: 788px">
+      <div class="container" style="margin: 0px 122px 0px 4px">
+        <h2>Manoj Varma</h2>
+        <p class="title">Designer</p>
+        <p>john@example.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="row">
+    <div class="card" style="margin-left: 788px">
+      <div class= "container" style="margin: 0px 64px 0px 4px">
+        <h2>Savyasach Reddy</h2>
+        <p class="title">CEO & Founder</p>
+        <p>jane@example.com</p>
+      </div>
+    </div>
+  </div>
 
     </div>
   </div>

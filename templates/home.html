@@ -1,3 +1,19 @@
+<script type="text/javascript">
+  function VerifyUploadSizeIsOK()
+  {
+     var UploadFieldID = "file-upload";
+     var MaxSizeInBytes = 2097152;
+     var fld = document.getElementById(UploadFieldID);
+     if( fld.files && fld.files.length == 1 && fld.files[0].size > MaxSizeInBytes )
+     {
+        alert("The file size must be no more than " + parseInt(MaxSizeInBytes/1024/1024) + "MB");
+        return false;
+     }
+     return true;
+  }
+  </script>
+  
+
 {% extends 'base.html' %}
 
 
@@ -17,8 +33,8 @@
     {%csrf_token%}
     <!-- {{form.non_field_errors}}
     {{form.as_p}} -->
-    <input type='file' name='file' required>
-    <input type='submit' value='upload' >
+    <input type='file' accept=".zip" name='file' required="true" id="file-upload">
+    <input type='submit' onclick="return VerifyUploadSizeIsOK()" value='Upload'>
 </form>
   <button><a href="{% url 'prev' %}">Previous Results</a></button>
 	{% else %}
