@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static '/main.css' %}">
+    {% if title %}
+        <title>legi0n - {{ title }}</title> 
+    {% else %}
+        <title>legi0n</title>
+    {% endif %}
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="/login">Sign In</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand mr-4" href="/signup">Sign Up</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </div>
+      </nav>
+    </header>
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8">
+      {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+      {% endif %}
+      {% block content %}
+      {% endblock %}
+    </div>
+    <div class="col-md-4">
+            <div class="about-section">
+            <h2 style="text-align:center">Our Team</h2>
+          </div>
+<div class="row">
+  <div class="row">
+    <div class="card">
+      <div class="container">
+        <h2>Jane Doe</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>jane@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card">
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="card">
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+    </main>
+  </body>
+</html>

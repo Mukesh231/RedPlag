@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+  <div class="content-section" style="text-align: center;">
+  	{% if user.is_authenticated %}
+  	<p>Have a Great Day {{ user.username }}!!</p>
+  	<form action='/home' method='GET' class="form-group">
+    	<button class="btn btn-outline-info" type="submit" style="font-size: 32px">Go back to Home</button>
+	</form>
+	<form action='/logout' method='GET' class="form-group">
+    	<button class="btn btn-outline-info" type="submit" style="font-size: 32px; margin-top: 10px;">Logout</button>
+	</form>
+  	{% else %}
+<p>Welcome to our page!!</p>
+<br>
+<form action='/login' method='GET' class="form-group">
+    	<button class="btn btn-outline-info" type="submit" style="font-size: 32px">Login</button>
+	</form>
+	<form action='/signup' method='GET' class="form-group">
+    	<button class="btn btn-outline-info" type="submit" style="font-size: 32px; margin-top: 10px;">Sign Up</button>
+	</form>
+    {% endif %}
+<br>
+<div class="border-top pt-3">
+            <small class="text-muted">
+                Already Have An Account? <a class="ml-2" href="/signup">Sign Up</a>
+            </small>
+        </div>
+  </div>
+{% endblock %}
