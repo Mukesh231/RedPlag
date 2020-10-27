@@ -1,4 +1,3 @@
-.gitignore
 .env
 .venv
 env/
@@ -9,9 +8,10 @@ venv.bak/
 *.log
 *.pot
 *.pyc
-__pycache__/
+**__pycache__
 local_settings.py
 db.sqlite3
-migrations/
-media
-__init__.py
+**/migrations/**
+media/
+api/
+uploads/
