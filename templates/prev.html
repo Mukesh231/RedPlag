@@ -1,33 +1,8 @@
-<!DOCTYPE html>
-<html>
-    {%load static%}
-    <head>
-        <meta charset='utf-8'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>Home</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <style>
-            div{
-                margin-bottom: 10px;
-            }
-        </style>
-    </head>
+{% extends 'base.html' %}
 
-
-    <body>
-        <header class="site-header">
-        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-            <div class="container">
-            <a class="navbar-brand mr-4" href="/login">Sign In</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand mr-4" href="/signup">Sign Up</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </div>
-        </nav>
-        </header>
+{% block content %} 
+    <div class='list'>
+        <h2>Previous Results</h2>
         {% if obj %}
             {% for ob in obj%}
                 <div>
@@ -39,5 +14,6 @@
                 </div>
             {% endfor %}
         {% endif %}
-    </body>
-</html>
+    </div>
+
+{% endblock %}
