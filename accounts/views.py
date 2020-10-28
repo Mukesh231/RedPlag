@@ -9,7 +9,7 @@ from .forms import CustomUserCreationForm, CustomUserChangeForm
 
 
 def start (request):
-	return render(request, 'start.html')
+  return render(request, 'start.html')
 
 
 @login_required
@@ -68,7 +68,7 @@ def login_view(request):
                   return HttpResponse("You're account is disabled.")
           else:
               # Return an 'invalid login' error message.
-              messages.fail(request, f'Invalid Username or Password, Try again!!')
+              messages.error(request, f'Invalid Username or Password, Try again!!')
               return render(request,'login.html', {})
     else:
         # the login is a  GET request, so just show the user the login form.
@@ -78,6 +78,6 @@ def login_view(request):
 
 @login_required
 def logout_view(request):
-	logout(request)
+  logout(request)
     # Redirect back to index page.
-	return render(request, 'login.html', {})
+  return render(request, 'login.html', {})

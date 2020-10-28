@@ -9,18 +9,22 @@
   {% csrf_token %}
   <fieldset class="form-group">
     <legend class="border-bottom mb-4">Sign in to continue</legend>
-  {% for field in form %}
-    <p>
-      {{ field.label_tag }}<br>
-      {{ field }}
-      {% if field.help_text %}
-        <small style="color: grey">{{ field.help_text }}</small>
-      {% endif %}
-      {% for error in field.errors %}
-        <p style="color: red">{{ error }}</p>
-      {% endfor %}
-    </p>
-  {% endfor %}
+  <div class="control-group">
+            <label class="control-label" for="username">Username</label>
+            <div class="controls">
+                <input type="text" id="username" name="username"  placeholder="Username">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="password">Password</label>
+            <div class="controls">
+                <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+        </div>
+
+
+
   </fieldset>
   <button class="btn btn-outline-info" type="submit">Sign In</button>
 </form>
