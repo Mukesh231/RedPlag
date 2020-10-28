@@ -25,7 +25,7 @@ Run $python3 manage.py runserver for a dev server. Navigate to http://127.0.0.1:
 ## What we’ve implemented so far:
 For Phase 1, we have worked on the implementing a robust user interface and integration with the backend. We've used the authentication support provided by django as a django contrib module in django.contrib.auth. However, we have extended the default user model to suit our needs, ie., we have added functionality to only enable users affiliated with a registered organisation to sign up. We have also allowed user change his/her password. We have implimented an UI to allow user to upload a zip file. We have also implimented an UI to allow user to download all his previous uploads results. Name of the zip file submitted and time at which it is submitted will be displayed.
 
-## What technology (languages, frameworks, etc.) you’ve used
+## Built With
 We have used Django Web Framework for both frontend and backend. 
 Install python3 with
 ```sh
