@@ -19,7 +19,7 @@ Create a superuser by running the following command and enter valid credentials
 $ python3 manage.py createsuperuser
 ```
 
-Run $python3 manage.py runserver for a dev server. Navigate to http://127.0.0.1:8000/
+Run ```$ python3 manage.py runserver``` for a dev server. Navigates to ```http://127.0.0.1:8000/```
 
 
 ## What we’ve implemented so far:
