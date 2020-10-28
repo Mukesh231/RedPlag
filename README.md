@@ -38,13 +38,13 @@ $ sudo apt install python3-pip
 $ pip3 install Django
 ```
 
-## How the tool is supposed to be run:
+## Usage
 First off, an organisation has to contact one of the developers to get verified and register with the site. We provide the orgnisation with a passcode.
 For a user to sign up, he/she just have to decide a user name and password. However, they need to provide the passcode of the organisation they're associated with to create an account.
 Once the user is in, they're free to use the tool.
 User can upload a zip of a folder containing the files to be checked. All files should be present in a single folder, which is to be zipped. User can upload a zip file of size upto 2MB. After uploading the file user will be redirected to a page where he can download the response file. In addition user can navigate to a page having previous results by clicking ```Previous results``` button in Home below ```upload``` button. 
 
-## What is yet to be done
+## Roadmap
 We are yet to implement the actual core logic to detect plagiarism. Once we are ready with that, we also plan to implement bonus features for language specific functionality and stub code.
 We'll be out with a documentation as soon as we're ready with the tool. Stay tuned!
 
