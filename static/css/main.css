@@ -217,3 +217,13 @@ a.article-title:hover {
   cursor: pointer;
   margin-top: 1rem;
 }
+
+.upload{
+  background: #61c558;
+  padding: 50px 100px;
+  outline: 1px solid white;
+  outline-offset: -10px;
+  outline-style: dashed;
+  border-radius: 3px;
+  margin-top: 50px;
+}

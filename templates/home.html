@@ -28,21 +28,27 @@
 <form action='/password_change' method='GET' class="form-group">
     	<button class="btn btn-outline-info" type="submit" style="font-size: 32px; margin-top: 10px;">Change Password</button>
   </form>
-  <h3 id='msg'>{{msg}}</h3>
-  <form action='/file/' method="POST" enctype="multipart/form-data" >
-    {%csrf_token%}
-    <!-- {{form.non_field_errors}}
-    {{form.as_p}} -->
-    <input type='file' accept=".zip" name='file' required="true" id="file-upload">
-    <input type='submit' onclick="return VerifyUploadSizeIsOK()" value='Upload'>
-</form>
-  <button><a href="{% url 'prev' %}">Previous Results</a></button>
+  
 	{% else %}
   <p>Please log in to continue</p>
   <a href="/login">Sign In</a>
   <p>Don't have an account yet?</p>
   <a href="/signup">Sign Up</a>
 {% endif %}
-
 </div>
+{% if user.is_authenticated %}
+  <div class='upload'>
+    <h3 id='msg'>{{msg}}</h3>
+    <form action='/file/' method="POST" enctype="multipart/form-data" >
+      {%csrf_token%}
+      <!-- {{form.non_field_errors}}
+      {{form.as_p}} -->
+      <input type='file' accept=".zip" name='file' required="true" id="file-upload">
+      <input type='submit' onclick="return VerifyUploadSizeIsOK()" value='Upload'>
+    </form>
+    <button id='prev'><a href="{% url 'prev' %}">Previous Results</a></button>
+  </div>
+{% endif %}
+
+
 {% endblock %}	

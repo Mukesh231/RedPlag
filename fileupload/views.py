@@ -11,10 +11,11 @@ from django.http import HttpResponse
 from django.conf import settings
 from .models import FILE
 from django.core.files.base import ContentFile, File
+from django.contrib.auth.decorators import login_required
 from .forms import FileUploadForm
 from django.http import Http404
 
-
+@login_required
 def form_upload(request):
     if request.method=="POST":
         form=FileUploadForm(request.POST, request.FILES)
@@ -43,15 +44,15 @@ def form_upload(request):
             #         st=''
             #         for name in names:
             #             st+=name+ ', '
-            time=timezone.now()
-            fil=FILE()
-            fil.user=request.user
-            fil.timestamp=time
-            fil.name=zip_name
-            fil.file.save(request.user.username+'_'+str(time.strftime("%Y%m%d%H%M%S"))+'.csv',ContentFile(st))
-            url1=fil.file.url
-            shutil.rmtree(os.path.join(settings.UPLOAD_ROOT,path_dir))
-            return render(request, 'download.html', {'url': request.build_absolute_uri(url1)})
+                time=timezone.now()
+                fil=FILE()
+                fil.user=request.user
+                fil.timestamp=time
+                fil.name=zip_name
+                fil.file.save(request.user.username+'_'+str(time.strftime("%Y%m%d%H%M%S"))+'.csv',ContentFile(st))
+                url1=fil.file.url
+                shutil.rmtree(os.path.join(settings.UPLOAD_ROOT,path_dir))
+                return render(request, 'download.html', {'url': request.build_absolute_uri(url1)})
     
         else:
             return render(request, 'home.html', {'msg': 'Please try again'})
