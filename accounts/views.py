@@ -68,7 +68,7 @@ def login_view(request):
                   return HttpResponse("You're account is disabled.")
           else:
               # Return an 'invalid login' error message.
-              messages.fail(request, f'Invalid Username or Password, Try again!!')
+              messages.error(request, f'Invalid Username or Password, Try again!!')
               return render(request,'login.html', {})
     else:
         # the login is a  GET request, so just show the user the login form.

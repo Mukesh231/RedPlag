@@ -2,12 +2,8 @@
 from django.contrib import admin 
 from django.contrib.auth.admin import UserAdmin 
 from .forms import CustomUserCreationForm, CustomUserChangeForm 
-<<<<<<< HEAD
 from .models import CustomUser
 from .models import Organisation 
-=======
-from .models import CustomUser, Organisation
->>>>>>> 9edfc3e7d6ed404647ad85feba2961175d871325
 
 class CustomUserAdmin(UserAdmin):
     model = CustomUser 

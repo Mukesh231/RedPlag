@@ -21,55 +21,40 @@
  <div class="content-section" style="text-align: center;">
 
 {% if user.is_authenticated %}
-<<<<<<< HEAD
 <div class="border-bottom mb-4">
   <h2 style="margin-bottom: 5px">Welcome to our page {{ user.username }}</h2>
 </div>
 <h3>Upload your file here :</h3>
 <br>
-=======
->>>>>>> 9edfc3e7d6ed404647ad85feba2961175d871325
-  Hi {{ user.username }}!
-<form action='/logout' method='GET' class="form-group">
-    	<button class="btn btn-outline-info" type="submit" style="font-size: 32px; margin-top: 10px;">Logout</button>
-	</form>
-<form action='/password_change' method='GET' class="form-group">
-    	<button class="btn btn-outline-info" type="submit" style="font-size: 32px; margin-top: 10px;">Change Password</button>
-  </form>
+  
   <h3 id='msg'>{{msg}}</h3>
   <form action='/file/' method="POST" enctype="multipart/form-data" >
     {%csrf_token%}
     <!-- {{form.non_field_errors}}
     {{form.as_p}} -->
-<<<<<<< HEAD
-  <div class=file_button>
-    <button class="fbtn">Upload a file</button>
-    <input type='file' accept=".zip" name='file' required="true" id="file_button">
 
-  </div>
+
+    <input type='file' accept=".zip" name='file' required="true" id="file-upload">
+    <input type='submit' onclick="return VerifyUploadSizeIsOK()" value='Upload'>
+
     <br>
-    <br>
-    <input type='submit' value='Upload' >
+    
 </form>
+  <button><a href="{% url 'prev' %}">Previous Results</a></button>
 
 
-<form action='/logout' method='GET' class="form-group">
-      <button class="btn btn-outline-info" type="submit" style="font-size: 20px; margin-top: 10px;">Logout</button>
-  </form>
+
 <form action='/password_change' method='GET' class="form-group">
       <button class="btn btn-outline-info" type="submit" style="font-size: 20px; margin-top: 10px;">Change Password</button>
   </form>
 
+<form action='/logout' method='GET' class="form-group">
+      <button class="btn btn-outline-info" type="submit" style="font-size: 20px; margin-top: 10px;">Logout</button>
+  </form>
 
 
 
 
-=======
->>>>>>> 9edfc3e7d6ed404647ad85feba2961175d871325
-    <input type='file' accept=".zip" name='file' required="true" id="file-upload">
-    <input type='submit' onclick="return VerifyUploadSizeIsOK()" value='Upload'>
-</form>
-  <button><a href="{% url 'prev' %}">Previous Results</a></button>
 	{% else %}
   <p>Please log in to continue</p>
   <a href="/login">Sign In</a>
