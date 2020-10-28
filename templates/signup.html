@@ -5,7 +5,7 @@
   
   <div class="content-section">
     {% if user.is_authenticated %}
-    <h2>Please Logout this session to Sign Up a new account.</h2>
+        <h2>Please Logout this session to Sign Up a new account.</h2>
     {% else %}
   <form method="post">
   {% csrf_token %}
