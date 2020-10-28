@@ -19,7 +19,7 @@ Create a superuser by running the following command and enter valid credentials
 $ python3 manage.py createsuperuser
 ```
 
-Run $python3 manage.py runserver for a dev server. Navigate to http://127.0.0.1:8000/
+Run ```$ python3 manage.py runserver``` for a dev server. Navigate to ```http://127.0.0.1:8000/```
 
 
 ## What we’ve implemented so far:
@@ -48,7 +48,7 @@ First create a **superuser** using
 ```sh
 $ python3 manage.py createsuperuser
 ```
-Then enter username, email and set a password. Once the superuser is created successfully, then navigate to http://127.0.0.1:8000/admin/ and login with your superuser credidentials and add some Organisations.
+Then enter username, email and set a password. Once the superuser is created successfully, then navigate to ```http://127.0.0.1:8000/admin/``` and login with your superuser credidentials and add some Organisations.
 
 User can upload a zip of a folder containing the files to be checked. All files should be present in a single folder, which is to be zipped. User can upload a zip file of size upto 2MB. 
 
