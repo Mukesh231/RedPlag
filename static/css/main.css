@@ -219,11 +219,10 @@ a.article-title:hover {
 }
 
 .upload{
-  background: #61c558;
+  background: white;
   padding: 50px 100px;
-  outline: 1px solid white;
+  outline: 1px solid black;
   outline-offset: -10px;
-  outline-style: dashed;
   border-radius: 3px;
   margin-top: 50px;
 }
@@ -240,4 +239,5 @@ a.article-title:hover {
 
 .list-button{
   float: right;
+  text-decoration: none;
 }
