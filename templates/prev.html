@@ -5,12 +5,12 @@
         <h2>Previous Results</h2>
         {% if obj %}
             {% for ob in obj%}
-                <div>
+                <div class='element'>
                     <label>Uploaded Time:</label> 
                     {{ob.timestamp}}<br>
-                    <label>File Name:</label>
+                    <label>Uploaded File Name:</label>
                     {{ob.name}}
-                    <button><a href={{ob.file.url}}>Download</a></button><br>
+                    <button class='list-button'><a href={{ob.file.url}}>Download</a></button><br>
                 </div>
             {% endfor %}
         {% endif %}

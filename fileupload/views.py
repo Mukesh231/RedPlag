@@ -60,6 +60,7 @@ def form_upload(request):
     else:
         raise Http404("Page Not Found")
 
+@login_required
 def prev_uploads(request):
     queryset=FILE.objects.filter(user=request.user)
     return render(request, 'prev.html', {'obj':queryset})

@@ -227,3 +227,17 @@ a.article-title:hover {
   border-radius: 3px;
   margin-top: 50px;
 }
+
+.element{
+  border:2px solid black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  border-radius: 2px;
+  margin-bottom: 3px;
+  padding-right: 150px;
+}
+
+.list-button{
+  float: right;
+}
