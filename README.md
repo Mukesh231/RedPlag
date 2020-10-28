@@ -23,7 +23,7 @@ Run ```$ python3 manage.py runserver``` for a dev server. Navigate to ```http://
 
 
 ## What we have implemented so far:
-For __Phase 1__ of this project, we have worked on the implementing a robust user interface and integration with the backend. We've used the authentication support provided by django as a django contrib module in __django.contrib.auth__. Moreover, we have extended the default user model to suit our needs, ie., we have added functionality to only enable users affiliated with a registered organisation to sign up. Registered users are allowed to change their account passwords. We have implimented an UI to allow user to upload a zip file. We have also implimented an UI to allow user to download all his previous uploads results. Name of the zip file submitted and time at which it is submitted will be displayed.
+For __Phase 1__ of this project, we have worked on implementing a robust user interface and integration with the backend. We've used the authentication support provided by django as a django contrib module in __django.contrib.auth__. Moreover, we have extended the default user model to suit our needs, ie., we have added functionality to only enable users affiliated with a registered organisation to sign up. Registered users are allowed to change their account passwords. We have implimented an UI to allow user to upload a zip file. We have also implimented an UI to allow user to download all his previous uploads results. Name of the zip file submitted and time at which it is submitted will be displayed.
 
 ## Built With
 We have used Django Web Framework for both frontend and backend.
