@@ -20,23 +20,13 @@
 {% block content %}
  <div class="content-section" style="text-align: center;">
 
+
 {% if user.is_authenticated %}
-  Hi {{ user.username }}!
-<form action='/logout' method='GET' class="form-group">
-    	<button class="btn btn-outline-info" type="submit" style="font-size: 32px; margin-top: 10px;">Logout</button>
-	</form>
-<form action='/password_change' method='GET' class="form-group">
-    	<button class="btn btn-outline-info" type="submit" style="font-size: 32px; margin-top: 10px;">Change Password</button>
-  </form>
-  
-	{% else %}
-  <p>Please log in to continue</p>
-  <a href="/login">Sign In</a>
-  <p>Don't have an account yet?</p>
-  <a href="/signup">Sign Up</a>
-{% endif %}
+<div class="border-bottom mb-4">
+  <h2 >Upload your files here :</h2>
 </div>
-{% if user.is_authenticated %}
+<div class="border-bottom mb-4">
+
   <div class='upload'>
     <h3 id='msg'>{{msg}}</h3>
     <form action='/file/' method="POST" enctype="multipart/form-data" >
@@ -46,9 +36,42 @@
       <input type='file' accept=".zip" name='file' required="true" id="file-upload">
       <input type='submit' onclick="return VerifyUploadSizeIsOK()" value='Upload'>
     </form>
+    <br>
     <button id='prev'><a href="{% url 'prev' %}">Previous Results</a></button>
+    <br>
+    <br>
   </div>
+</div>
 {% endif %}
+
+
+
+{% if user.is_authenticated %}
+
+
+<form action='/password_change' method='GET' class="form-group">
+      <button class="btn btn-outline-info" type="submit" style="font-size: 20px; margin-top: 10px;">Change Password</button>
+  </form>
+
+
+
+
+<form action='/logout' method='GET' class="form-group">
+    	<button class="btn btn-outline-info" type="submit" style="font-size: 20px; margin-top: 10px;">Logout</button>
+	</form>
+
+
+
+
+  
+	{% else %}
+  <p>Please log in to continue</p>
+  <a href="/login">Sign In</a>
+  <p>Don't have an account yet?</p>
+  <a href="/signup">Sign Up</a>
+{% endif %}
+</div>
+
 
 
 {% endblock %}	
