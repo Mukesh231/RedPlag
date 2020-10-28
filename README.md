@@ -43,7 +43,7 @@ $ pip3 install Django
 For a user to sign up, he/she just have to decide a user name and password. However, they need to provide the passcode of the organisation they're associated with to create an account.
 Once the user is in, they're free to use the tool.
 
-###Registering an Organisation 
+### Registering an Organisation 
 First create a **superuser** using
 ```sh
 $ python3 manage.py createsuperuser
