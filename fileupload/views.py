@@ -32,9 +32,11 @@ def form_upload(request):
                             info.filename=spl[0]+'_'+request.user.username+'_'+str(timezone.now().strftime("%Y%m%d%H%M%S"))+'/'+spl[1]
                         path_dir=info_list[0].filename
                         zip_file.extractall(members=info_list,path=settings.UPLOAD_ROOT)
-                        st=''
-                        for name in names:
-                            st+=name+ ', '
+                        # st=''
+                        # for name in names:
+                        #     st+=name+ ', '
+
+
                 except(KeyError, BadZipFile):
                     return render(request, 'home.html', {'msg': 'BadZipFile, try uploading again'})
             # elif tarfile.is_tarfile(file):
@@ -45,12 +47,22 @@ def form_upload(request):
             #         for name in names:
             #             st+=name+ ', '
                 time=timezone.now()
+                temporary_inp="python3 testing.py ./uploads/" + str(path_dir)
+                os.system(temporary_inp)
+
                 fil=FILE()
                 fil.user=request.user
                 fil.timestamp=time
                 fil.name=zip_name
-                fil.file.save(request.user.username+'_'+str(time.strftime("%Y%m%d%H%M%S"))+'.csv',ContentFile(st))
+                newfilename=request.user.username+'_'+str(time.strftime("%Y%m%d%H%M%S"))+'.csv'
+                fil.file.save(newfilename, ContentFile(''))
                 url1=fil.file.url
+
+                temporary_inp2="cp results.csv ./media/"+ newfilename
+
+                os.system(temporary_inp2)
+
+                os.remove('results.csv')
                 shutil.rmtree(os.path.join(settings.UPLOAD_ROOT,path_dir))
                 return render(request, 'download.html', {'url': request.build_absolute_uri(url1)})
     
