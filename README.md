@@ -16,6 +16,7 @@ Follwing this, we again traverse all the files, but now, for each file, we creat
 2. __tf-idf__ : The naive term-document matrix is updated by replacing each term in the matrix with the *relative frequency* of that word in our corpus.  The overall effect of this weighting scheme is to avoid a common problem when conducting text analysis: the most frequently used words in a document are often the most frequently used words in all of the documents. In contrast, terms with the highest tf-idf scores are the terms in a document that are distinctively frequent in a document, when that document is compared other documents.
 
 Once we arrive at the refined term-document matrix, we proceed to apply __Latent Semantic Analysis__ to move ahead:
+
 __Latent Semantic Analysis (LSA)__ : LSA attempts to cluster words of the document into "topics". We do this because the term-document matrix by itself is too large to perform computations on. Moreover, two documents may convey the same idea though they're using different words, and catching plagiarism in this case using our naive matrix would take us nowhere. Thus, we use LSA, which is a statistical method to group words belonging to the same "topic" together. We essentially apply Singluar Value Decomposition (SVD) to our term-document matrix and reduce the relevant dimension (the dimension containing the terms in the matrix) to the required number of topics. We use
 # ANNAAAAAAAAAAA
 to estimate the optimal number of topics to reduce to, so as to not lose huge data. We now obtain our final *topic-document* matrix.
