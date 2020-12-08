@@ -17,7 +17,8 @@ Follwing this, we again traverse all the files, but now, for each file, we creat
 
 Once we arrive at the refined term-document matrix, we proceed to apply __Latent Semantic Analysis__ to move ahead:
 
-__Latent Semantic Analysis (LSA)__ : LSA attempts to cluster words of the document into "topics". We do this because the term-document matrix by itself is too large to perform computations on. Moreover, two documents may convey the same idea though they're using different words, and catching plagiarism in this case using our naive matrix would take us nowhere. Thus, we use LSA, which is a statistical method to group words belonging to the same "topic" together. We essentially apply Singluar Value Decomposition (SVD) to our term-document matrix and reduce the relevant dimension (the dimension containing the terms in the matrix) to the required number of topics. We use
+__Latent Semantic Analysis (LSA)__ : LSA attempts to cluster words of the document into "topics". We do this because the term-document matrix by itself is too large to perform computations on. Moreover, two documents may convey the same idea though they're using different words, and catching plagiarism in this case using our naive matrix would consume a lot of time and memory and not yield very satisfactory results. Thus, we use LSA, which is a statistical method to group words belonging to the same "topic" together. We essentially apply Singluar Value Decomposition (SVD) to our term-document matrix and reduce the relevant dimension (the dimension containing the terms in the matrix) to the required number of topics. 
+We use
 # ANNAAAAAAAAAAA
 to estimate the optimal number of topics to reduce to, so as to not lose huge data. We now obtain our final *topic-document* matrix.
 
