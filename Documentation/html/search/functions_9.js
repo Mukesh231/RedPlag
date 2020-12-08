@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['prev_5fuploads',['prev_uploads',['../namespacefileupload_1_1views.html#ae6ffd53e2bc86b52dbcbd11458cf8553',1,'fileupload::views']]],
-  ['profile',['profile',['../namespaceaccounts_1_1views.html#a83eb6818883db08bbd875eae98160e7c',1,'accounts::views']]]
+  ['signup',['signup',['../namespaceviews.html#a1d82beca5d23d3b7f834aa720a4fe0fe',1,'views']]],
+  ['start',['start',['../namespaceviews.html#a55876750f2f3540ecefb7f48bae0c0c9',1,'views']]]
 ];

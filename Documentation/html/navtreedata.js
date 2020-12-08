@@ -10,16 +10,6 @@ var NAVTREE =
         [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
-      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
-      ] ]
-    ] ],
     [ "Files", null, [
       [ "File List", "files.html", "files" ]
     ] ]
@@ -28,7 +18,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_red_plag_2____init_____8py.html"
+"accounts_2views_8py.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

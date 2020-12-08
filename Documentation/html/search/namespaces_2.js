@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['manage',['manage',['../namespacemanage.html',1,'']]]
+  ['views',['views',['../namespaceviews.html',1,'']]]
 ];

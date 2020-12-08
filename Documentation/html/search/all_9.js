@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['ha',['ha',['../namespacetest.html#a5b8e64c354b7b9718b13075c54ac1b01',1,'test']]],
-  ['home',['home',['../namespaceaccounts_1_1views.html#a362723239aa9671d41a01a1fea4213a9',1,'accounts::views']]]
+  ['redplag_20_2d_20a_20plagiarism_20checker',['RedPlag - A Plagiarism Checker',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['rounding',['rounding',['../namespacetesting.html#ae45c5c1db1adaacd201626e7233dabe0',1,'testing']]]
 ];

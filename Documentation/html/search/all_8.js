@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['global_5ffrequency',['global_frequency',['../namespacefunctionality.html#aa8ce6e9aa7820e69cbfd51a92832483f',1,'functionality.global_frequency()'],['../namespacetesting.html#a96c552298a1ed208e067b672986e297d',1,'testing.global_frequency()']]]
+  ['prev_5fuploads',['prev_uploads',['../namespaceviews.html#aa7ef34f69b3ff02e95b423abbc796d4d',1,'views']]],
+  ['profile',['profile',['../namespaceviews.html#a7d7646ab22aadc3907df5f3063ffd984',1,'views']]]
 ];

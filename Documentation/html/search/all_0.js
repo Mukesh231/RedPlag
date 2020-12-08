@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['0001_5finitial_2epy',['0001_initial.py',['../accounts_2migrations_20001__initial_8py.html',1,'(Global Namespace)'],['../fileupload_2migrations_20001__initial_8py.html',1,'(Global Namespace)']]]
+  ['comment_5fremover_5fjava',['comment_remover_java',['../namespacetesting.html#a8c338b1a7462e8cd84a97fcc46123568',1,'testing']]],
+  ['comment_5fremover_5fpy',['comment_remover_py',['../namespacetesting.html#a8d081c4c417f5fb4795ac6d1e1ea7db0',1,'testing']]]
 ];
