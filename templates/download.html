@@ -18,78 +18,73 @@
                 <div class="navbar-nav">
                       <a class="nav-item nav-link" href="/home">Home</a>
                       <a class="nav-item nav-link" href="/logout">Logout</a>
-                  </div>
-                
+                </div>
               </div>
             </nav>
           </header>
           
           <div class="container">
             <div class="row">
-          <div class ="col-md-8">
-          <div class ="content-section">
-            <h2 class="border-bottom mb-4">Your file is uploaded successfully</h2>
-          <div class="horizontal-center">
-                <button class="buttonlamb button1lamb"><a href={{url}}>Download</a></button><br>
-                        
-                <button class="buttonlamb button1lamb"><a href="{% url 'home' %}">Upload Another File</a></button><br><br>
-                {% autoescape off %}
-                <div>{{img}}</div>
-                {% endautoescape %}
-
-
-            </div>
-          </div>
-          </div>
-
+              <div class ="col-md-8">
+                <div class ="content-section">
+                  <h2 class="border-bottom mb-4">Your file is uploaded successfully</h2>
+                   <div class="horizontal-center">
+                    <button class="buttonlamb button1lamb"><a href={{url}}>Download</a></button><br>
+                    <button class="buttonlamb button1lamb"><a href="{% url 'home' %}">Upload Another File</a></button><br><br>
+                  </div>
+                </div>
+                <div>
+                  <img src={{image}} width='100%'>
+                </div>
+              </div>
               <div class="col-md-4">
-            <div class="about-section" style="padding: 30px;background-color: #92A8D1 " >
-            <h2 style="text-align:center">Developers :</h2>
-          </div>
+                <div class="about-section" style="padding: 30px;background-color: #92A8D1 " >
+                  <h2 style="text-align:center">Developers :</h2>
+                </div>
+               
+
+                <div class="row">
+                  <div class="card" style="margin-left: 14px">
+                    <div class="container" style="margin: 0px 102px 0px 4px">
+                      <h2>Mukesh Reddy</h2>
+                      <p class="title"></p>
+                      <p>190050054@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row ">
+                  <div class="card" style="margin-left: 14px">
+                    <div class="container" style="margin: 0px 97px 0px 4px">
+                      <h2>Heemmanshuu</h2>
+                      <p class="title"></p>
+                      <p>190050029@iitb.ac.in</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row ">
+                <div class="card" style="margin-left: 14px">
+                  <div class="container" style="margin: 0px 122px 0px 4px">
+                    <h2>Manoj Varma</h2>
+                    <p class="title"></p>
+                    <p>190050016@iitb.ac.in</p>
+                  </div>
+                </div>
+              </div>
 
 
-  <div class="row">
-    <div class="card" style="margin-left: 14px">
-      <div class="container" style="margin: 0px 42px 0px 4px">
-        <h2>Mukesh Reddy</h2>
-        <p class="title"></p>
-        <p>julakantimukeshreddy123@gmail.com</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="row ">
-    <div class="card" style="margin-left: 14px">
-      <div class="container" style="margin: 0px 97px 0px 4px">
-        <h2>Heemmanshuu</h2>
-        <p class="title"></p>
-        <p>190050029@iitb.ac.in</p>
-      </div>
-    </div>
-  </div>
-    <div class="row ">
-    <div class="card" style="margin-left: 14px">
-      <div class="container" style="margin: 0px 122px 0px 4px">
-        <h2>Manoj Varma</h2>
-        <p class="title"></p>
-        <p>190050016@iitb.ac.in</p>
-      </div>
-    </div>
-  </div>
-
-
-<div class="row">
-  <div class="row">
-    <div class="card" style="margin-left: 30px">
-      <div class= "container" style="margin: 0px 64px 0px 4px">
-        <h2>Savyasach Reddy</h2>
-        <p class="title"></p>
-        <p>esavyareddy2@gmail.com</p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+              <div class="row">
+                <div class="row">
+                  <div class="card" style="margin-left: 30px">
+                    <div class= "container" style="margin: 0px 64px 0px 4px">
+                      <h2>Savyasach Reddy</h2>
+                      <p class="title"></p>
+                      <p>esavyareddy2@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
                         
