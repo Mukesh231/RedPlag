@@ -9,14 +9,48 @@ from .forms import CustomUserCreationForm, CustomUserChangeForm
 
 
 def start (request):
-  return render(request, 'start.html')
+    """!
+    ????????????
+
+    @param request ???????
+    @return ????????
+    
+    
+    
+    
+    
+    """
+    return render(request, 'start.html')
 
 
 @login_required
 def home(request):
+
+    """!
+    ????????????
+
+    @param request ???????
+    @return ????????
+    
+    
+    
+    
+    
+    """
     return render(request, 'home.html')
 
 def signup(request):
+    """!
+    ????????????
+
+    @param request ???????
+    @return ????????
+    
+    
+    
+    
+    
+    """
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
@@ -48,12 +82,34 @@ def signup(request):
 
 @login_required
 def profile(request):
+    """!
+    ????????????
+
+    @param request ???????
+    @return ????????
+    
+    
+    
+    
+    
+    """
     return render(request, 'profile.html')
 
 
 
 
 def login_view(request):
+    """!
+    ????????????
+
+    @param request ???????
+    @return ????????
+    
+    
+    
+    
+    
+    """
     if request.method == 'POST':
           username = request.POST['username']
           password = request.POST['password']
@@ -78,6 +134,17 @@ def login_view(request):
 
 @login_required
 def logout_view(request):
-  logout(request)
-    # Redirect back to index page.
-  return render(request, 'login.html', {})
+    """!
+    ????????????
+
+    @param request ???????
+    @return ????????
+    
+    
+    
+    
+    
+    """
+    logout(request)
+        # Redirect back to index page.
+    return render(request, 'login.html', {})
