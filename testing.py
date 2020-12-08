@@ -56,7 +56,7 @@ def extract_files():
     @return List containing relative pathways to files belonging to the given directory 
 
     """
-    dirname = [file for file in glob.glob(sys.argv[1]+"/*")]
+    dirname = [file for file in glob.glob(sys.argv[1]+"/*") ]
     return dirname
 
 def global_frequency():
