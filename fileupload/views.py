@@ -23,10 +23,10 @@ from django.http import Http404
 @login_required
 def form_upload(request):
     """!
-    Uploading and running the program.
+    User can upload a file. This is where the core logic is applied.
 
-    @param request
-    @return ????????
+    @param request HTTP request
+    @return render() function which creates the HttpResponse that is sent back to the browser
     
     
     
@@ -109,10 +109,10 @@ def form_upload(request):
 @login_required
 def prev_uploads(request):
     """!
-    This is used to fetch all the previous submissions made by the user.
+    This is used to fetch all the previous submissions made by the user.    
     
-    
-    
+    @param request HTTP request
+    @return render() function which creates the HttpResponse that is sent back to the browser
     
     
     """
