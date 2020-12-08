@@ -199,7 +199,7 @@ def dim_k(dtm):
     for x in s:
         e=e+x*x
         k_req=k_req+1
-        if e>0.9*emax:
+        if e>0.95*emax:
             break
     return k_req
 
