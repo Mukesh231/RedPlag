@@ -1,7 +1,6 @@
 var NAVTREE =
 [
   [ "RedPlag", "index.html", [
-    [ "RedPlag - A Plagiarism Checker", "md__r_e_a_d_m_e.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -16,6 +15,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
@@ -27,7 +27,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"accounts_2views_8py.html"
+"_red_plag_2____init_____8py.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['login_5fview',['login_view',['../namespaceviews.html#a5104bb796be6e17bbc1239b3ba133789',1,'views']]],
-  ['logout_5fview',['logout_view',['../namespaceviews.html#a77ea72e44253ce8f267bb89e8cbd76dc',1,'views']]]
+  ['email_5fbackend',['EMAIL_BACKEND',['../namespace_red_plag_1_1settings.html#a509e3ce94624c824fcfac2c5a85ca2c5',1,'RedPlag::settings']]],
+  ['email_5ffile_5fpath',['EMAIL_FILE_PATH',['../namespace_red_plag_1_1settings.html#a963ff9b2b5f83aa7364b506864c6d53b',1,'RedPlag::settings']]],
+  ['extract_5ffiles',['extract_files',['../namespacetesting.html#a1d06f501c99dc4764ce2fc91e0a36823',1,'testing']]]
 ];

@@ -1,8 +1,8 @@
 var namespaces =
 [
-    [ "forms", "namespaceforms.html", null ],
+    [ "accounts", "namespaceaccounts.html", "namespaceaccounts" ],
+    [ "fileupload", "namespacefileupload.html", "namespacefileupload" ],
     [ "manage", "namespacemanage.html", null ],
-    [ "models", "namespacemodels.html", null ],
-    [ "testing", "namespacetesting.html", null ],
-    [ "views", "namespaceviews.html", null ]
+    [ "RedPlag", "namespace_red_plag.html", "namespace_red_plag" ],
+    [ "testing", "namespacetesting.html", null ]
 ];

@@ -95,23 +95,38 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="title">RedPlag Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<ul><li><a href="index.html"><span>Main&#160;Page</span></a>
-</li><li><a href="pages.html"><span>Related&#160;Pages</span></a>
-</li><li><a href="namespaces.html"><span>Namespaces</span></a>
-<ul><li><a href="namespaces.html"><span>Namespace&#160;List</span></a>
-</li><li><a href="namespacemembers.html"><span>Namespace&#160;Members</span></a>
-</li></ul>
-</li><li><a href="annotated.html"><span>Classes</span></a>
-<ul><li><a href="annotated.html"><span>Class&#160;List</span></a>
-</li><li><a href="classes.html"><span>Class&#160;Index</span></a>
-</li><li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a>
-</li><li><a href="functions.html"><span>Class&#160;Members</span></a>
-</li></ul>
-</li><li><a href="files.html"><span>Files</span></a>
-<ul><li><a href="files.html"><span>File&#160;List</span></a>
-</li></ul>
-</li></ul>
-</div><!-- contents -->
+<div class="textblock"><h1>Our Work:</h1>
+<p>For this project, we have built a web based application to detect plagiarism when provided with a set of text documents.</p>
+<h2>UI and user authentication</h2>
+<p>We have used Django Web Framework for building both the frontend and backend. For authentication, we used the authentication support provided by django in the <b>django.contrib.auth</b> module. Moreover, we have extended the default user model to suit our needs, ie., we have added functionality to only enable users affiliated with a registered organisation to sign up. Registered users are allowed to change their account passwords. We have implimented an UI to allow user to upload a zip file. A user can download all his previous uploads results. Name of the zip file submitted and time at which it is submitted will be displayed.</p>
+<h2>The Core Logic</h2>
+<p><b>Pre-processing</b> : For each code file in C, C++, java, or python, the string which contains the contents of the file is refined by removing all the comments in the code.</p>
+<p>The first crucial checkpoint we arrive at is the computation of the term-document matrix. We achieve this using:</p><ol type="1">
+<li><b>Bag of Words</b> : After pre-processing of the files is complete, we apply word-tokenisation to the string containing the contents of the files. Now, for each word in the file, we check if the word is a stop-word (i.e., a filler word that has no real meaning or relevance to the topic) and if it isn't we add it to a dictionary containing frequency counts for each word, or update the frequency count of the word if it is already present in the dictionary. Characters are converted to lowercase to avoid unecessary extras. This is our collection of the total document frequency, which shows the frequency of each word in the entire set of documents. Follwing this, we again traverse all the files, but now, for each file, we create a new dictionary containing each word in the global dictionary mapped to its frequency <em>in the file</em>. We take the list of values and append it to a matrix, this is our naive term-document matrix.</li>
+<li><b>tf-idf</b> : The naive term-document matrix is updated by replacing each term in the matrix with the <em>relative frequency</em> of that word in our corpus. The overall effect of this weighting scheme is to avoid a common problem when conducting text analysis: the most frequently used words in a document are often the most frequently used words in all of the documents. In contrast, terms with the highest tf-idf scores are the terms in a document that are distinctively frequent in a document, when that document is compared other documents.</li>
+</ol>
+<p>Once we arrive at the refined term-document matrix, we proceed to apply <b>Latent Semantic Analysis</b> to move ahead:</p>
+<p><b>Latent Semantic Analysis (LSA)</b> : LSA attempts to cluster words of the document into "topics". We do this because the term-document matrix by itself is too large to perform computations on. Moreover, two documents may convey the same idea though they're using different words, and catching plagiarism in this case using our naive matrix would consume a lot of time and memory and not yield very satisfactory results. Thus, we use LSA, which is a statistical method to group words belonging to the same "topic" together. We essentially apply Singluar Value Decomposition (SVD) to our term-document matrix and reduce the relevant dimension (the dimension containing the terms in the matrix) to the required number of topics. We use </p><h1>ANNAAAAAAAAAAA</h1>
+<p>to estimate the optimal number of topics to reduce to, so as to not lose huge data. We now obtain our final <em>topic-document</em> matrix.</p>
+<p>Once we have our topic-document matrix ready, we normalise it and compute <b>cosine similarity</b> for each pair of documents, with the results obtained in a square matrix obtained by the dot product of the topic-document matrix with itself. The similarity matrix is returned to the user, with the cosine similarity depicting the degree of similarity between each pair of documents.</p>
+<h1>Built With</h1>
+<p>We have used Django Web Framework for building both the frontend and backend. Install python3 with </p><div class="fragment"><div class="line">sudo apt update</div><div class="line">sudo apt install python3</div></div><!-- fragment --><p> Install Django with </p><div class="fragment"><div class="line">sudo apt install python3-pip</div><div class="line">pip3 install Django</div></div><!-- fragment --><p> In addition, we have imported and made use of a few python modules which might need to to be installed separately in the developer's system, provided they aren't already present :P Install the required modules with: </p><div class="fragment"><div class="line">pip3 install numpy</div><div class="line">pip3 install nltk</div><div class="line">pip3 install pandas</div><div class="line">pip3 install sklearn</div><div class="line">pip3 install matplotlib</div><div class="line">pip3 install mpld3</div></div><!-- fragment --><p> We have also used a resource belonging to the nltk module that can to be installed from the python3 shell using: </p><div class="fragment"><div class="line">python3</div><div class="line">&gt;&gt;&gt; import nltk</div><div class="line">&gt;&gt;&gt; nltk.download(&#39;stopwords&#39;)</div></div><!-- fragment --> <h1>Using the tool</h1>
+<p>Download this repository from github and follow the relevant instructions below to get going!</p>
+<h2>Development server</h2>
+<ol type="1">
+<li>Move to <code>&lt;project-dir&gt;</code>, and edit the settings related to DB, timezone and other settings in <a class="el" href="settings_8py.html">settings.py</a>.</li>
+<li>Make migrations by running <div class="fragment"><div class="line">python3 manage.py makemigrations</div><div class="line">python3 manage.py makemigrations fileupload</div><div class="line">python3 manage.py makemigrations accounts </div><div class="line">python3 manage.py migrate</div></div><!-- fragment --></li>
+</ol>
+<p>Create a superuser by running the following command and entering your credentials </p><div class="fragment"><div class="line">python3 manage.py createsuperuser</div></div><!-- fragment --><p>Run <code>$ python3 <a class="el" href="manage_8py.html">manage.py</a> runserver</code> for a dev server. Navigate to <code><a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></code></p>
+<p>Now, create a <b>superuser</b> ID using </p><div class="fragment"><div class="line">python3 manage.py createsuperuser</div></div><!-- fragment --><p> You will be required to enter your username, email and set a password. Once the superuser is created successfully, navigate to <code><a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a></code> and login with your superuser credidentials. The superuser can now view and manipulate existing user and file data, register or deregister organisations, and much more.</p>
+<h2>How to use:</h2>
+<p>For a user to sign up, they just have to decide a user name and password. As an additional form of security, a user is required to provide the passcode of the organisation they're associated with to create an account. Once the user is in, they're free to use the tool.</p>
+<p>The user can upload a zipped folder containing the files to be checked, provided he has signed up and logged in, of course. All files are required be present in a single folder. The user can upload a zip file of size upto 2MB.</p>
+<p>After uploading the folder, the user will be redirected to a page where they can download the result files. In addition, users can find the previous results of their file sets by clicking the <code>Previous results</code> button.</p>
+<h2>Registering an Organisation</h2>
+<p>An organisation can only be registered by the dev or a superuser. Click on the Add+ button necxt to Organisations to register a organisation with its name and passcode.</p>
+<p>Register an organisation from the shell, after navigating to the project directory, with:</p>
+<div class="fragment"><div class="line">python3 manage.py shell</div><div class="line">&gt;&gt;&gt; from accounts.models import Organisation</div><div class="line">&gt;&gt;&gt; org = Organisation(organame=&quot;REQUIRED ORGANISATION NAME&quot;, orgacode=&quot;REQUIRED ORGANISATION CODE&quot;)</div><div class="line">&gt;&gt;&gt; org.save()</div></div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

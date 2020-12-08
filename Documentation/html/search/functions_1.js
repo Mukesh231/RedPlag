@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['dim_5fk',['dim_k',['../namespacetesting.html#a6b24ff7e9724aea0d34b933907f7e292',1,'testing']]],
-  ['dtm_5fidf',['dtm_idf',['../namespacetesting.html#a47d0f534685506fce8781770afeef133',1,'testing']]]
+  ['comment_5fremover_5fjava',['comment_remover_java',['../namespacetesting.html#a8c338b1a7462e8cd84a97fcc46123568',1,'testing']]],
+  ['comment_5fremover_5fpy',['comment_remover_py',['../namespacetesting.html#a8d081c4c417f5fb4795ac6d1e1ea7db0',1,'testing']]]
 ];
