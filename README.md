@@ -24,6 +24,8 @@ pip3 install numpy
 pip3 install nltk
 pip3 install pandas
 pip3 install sklearn
+pip3 install matplotlib
+pip3 install mpld3
 ```
 We have also used a resource belonging to the nltk module that can to be installed from the python3 shell using:
 ```sh
@@ -50,20 +52,23 @@ python3 manage.py createsuperuser
 
 Run ```$ python3 manage.py runserver``` for a dev server. Navigate to ```http://127.0.0.1:8000/```
 
+Now, create a **superuser** ID using
+```sh
+python3 manage.py createsuperuser
+```
+You will be required to enter your username, email and set a password. Once the superuser is created successfully, navigate to ```http://127.0.0.1:8000/admin/``` and login with your superuser credidentials. The superuser can now view and manipulate existing user and file data, register or deregister organisations, and much more.
+
 
 ## How the tool is supposed to be run:
 
 For a user to sign up, they just have to decide a user name and password. As an additional form of security, a user is required to provide the passcode of the organisation they're associated with to create an account.
 Once the user is in, they're free to use the tool.
 
-### Registering an Organisation 
-First create a **superuser** using
-```sh
-python3 manage.py createsuperuser
-```
-You will be required to enter your username, email and set a password. Once the superuser is created successfully, navigate to ```http://127.0.0.1:8000/admin/``` and login with your superuser credidentials and register Organisations as required.
-
 The user can upload a zipped folder containing the files to be checked, provided he has signed up and logged in, of course. All files are required be present in a single folder. User can upload a zip file of size upto 2MB. 
 
 After uploading the folder, the user will be redirected to a page where they can download the result files. In addition, users can find the previous results of their file sets by clicking the ```Previous results``` button. 
+
+### Registering an Organisation 
+An organisation can only be registered by the dev or a superuser. 
+
 
