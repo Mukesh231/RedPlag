@@ -119,9 +119,9 @@ def form_upload(request):
             temporary_inp2="cp results.csv ./media/"+ newfilename
             os.system(temporary_inp2)
             os.remove('results.csv')
-            shutil.rmtree(os.path.join(settings.UPLOAD_ROOT,path_dir))
-            return render(request, 'download.html', {'url': request.build_absolute_uri(url1), 'image':'/media/'+request.user.username+'_'+time+'.png'})
-
+            shutil.rmtree(os.path.join(settings.UPLOAD_ROOT, path_dir))
+            url2='/media/'+request.user.username+'_'+time+'.png'
+            return render(request, 'download.html', {'url': request.build_absolute_uri(url1),'url2':request.build_absolute_uri(url2), 'image':'/media/'+request.user.username+'_'+time+'.png'})
         else:
             return render(request, 'home.html', {'msg': 'Please try again' })
 
