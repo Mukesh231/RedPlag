@@ -1,0 +1,1 @@
+\form#0:$idf(t) \; = \; 1 + log((N+1)/no.of \; documents \; containing \; t)$
