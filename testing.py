@@ -50,6 +50,7 @@ def global_frequency():
     for filename in extract_files():
         fhand = open(filename)
         content = fhand.read()
+        content = content.lower()
         if filename[-3:] == ".py" :
             content_without_comments = comment_remover_py(content)
             words = word_tokenize(content_without_comments)
@@ -75,6 +76,7 @@ def tf():
         icounts = dict()           #to store term frequency
         fhand = open(filename)
         content = fhand.read()
+        content = content.lower()
         if filename[-3:] == ".py" :
             content_without_comments = comment_remover_py(content)
             words = word_tokenize(content_without_comments)
@@ -144,7 +146,6 @@ def main():
     dtm = np.array(dtm_idf()[1])
     k_req = dim_k(dtm)
     Ufunc = TruncatedSVD(k_req, algorithm = 'arpack')
-
     US = Ufunc.fit_transform(dtm)
     V=Ufunc.components_
     dtm_lsa = Normalizer(copy=False).fit_transform(US)
