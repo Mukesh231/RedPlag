@@ -10,15 +10,11 @@ from .forms import CustomUserCreationForm, CustomUserChangeForm
 
 def start (request):
     """!
-    ????????????
+    Redirects to home page
 
-    @param request ???????
-    @return ????????
-    
-    
-    
-    
-    
+    @param request HTTP request
+    @return render() function which creates the HttpResponse that is sent back to the browser
+
     """
     return render(request, 'start.html')
 
@@ -27,13 +23,11 @@ def start (request):
 def home(request):
 
     """!
-    ????????????
+    Redirects to home page
 
-    @param request ???????
-    @return ????????
-    
-    
-    
+    @param request HTTP request
+    @return render() function which creates the HttpResponse that is sent back to the browser
+
     
     
     """
@@ -41,13 +35,13 @@ def home(request):
 
 def signup(request):
     """!
-    ????????????
+    Redirects to signup page.
 
-    @param request ???????
-    @return ????????
-    
-    
-    
+    Adds a User account to the database if registration is succesful, else provides the user with an empty sign up form
+
+    @param request HTTP request
+    @return render() function which creates the HttpResponse that is sent back to the browser
+
     
     
     """
@@ -83,15 +77,12 @@ def signup(request):
 @login_required
 def profile(request):
     """!
-    ????????????
+    Redirects to the user profile page.
 
-    @param request ???????
-    @return ????????
-    
-    
-    
-    
-    
+    This function requires the user to be logged in to the system, to be avaliable for access.
+
+    @param request HTTP request
+    @return render() function which creates the HttpResponse that is sent back to the browser    
     """
     return render(request, 'profile.html')
 
@@ -100,15 +91,13 @@ def profile(request):
 
 def login_view(request):
     """!
-    ????????????
+    Redirects to login page.
 
-    @param request ???????
-    @return ????????
-    
-    
-    
-    
-    
+    Redirects the user to the home page only upon succesful login, else redirects to login page again.
+
+    @param request HTTP request
+    @return render() function which creates the HttpResponse that is sent back to the browser
+   
     """
     if request.method == 'POST':
           username = request.POST['username']
@@ -135,14 +124,13 @@ def login_view(request):
 @login_required
 def logout_view(request):
     """!
-    ????????????
+    Logs the user out of the system and redirects to login page.
 
-    @param request ???????
-    @return ????????
-    
-    
-    
-    
+    This function requires the user to be logged in to the system, to be avaliable for access.
+
+    @param request HTTP request
+    @return render() function which creates the HttpResponse that is sent back to the browser
+
     
     """
     logout(request)
