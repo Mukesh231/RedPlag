@@ -119,10 +119,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:a77ea72e44253ce8f267bb89e8cbd76dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs the user out of the system and redirects to login page.  <a href="#a77ea72e44253ce8f267bb89e8cbd76dc">More...</a><br /></td></tr>
 <tr class="separator:a77ea72e44253ce8f267bb89e8cbd76dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e84f1f5f999622bda0225ea25fab857"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceviews.html#a8e84f1f5f999622bda0225ea25fab857">form_upload</a> (request)</td></tr>
-<tr class="memdesc:a8e84f1f5f999622bda0225ea25fab857"><td class="mdescLeft">&#160;</td><td class="mdescRight">User can upload a file.  <a href="#a8e84f1f5f999622bda0225ea25fab857">More...</a><br /></td></tr>
+<tr class="memdesc:a8e84f1f5f999622bda0225ea25fab857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contents of a compressed file uploaded by the user are extracted and checked for cases of copying.  <a href="#a8e84f1f5f999622bda0225ea25fab857">More...</a><br /></td></tr>
 <tr class="separator:a8e84f1f5f999622bda0225ea25fab857"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7ef34f69b3ff02e95b423abbc796d4d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceviews.html#aa7ef34f69b3ff02e95b423abbc796d4d">prev_uploads</a> (request)</td></tr>
-<tr class="memdesc:aa7ef34f69b3ff02e95b423abbc796d4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is used to fetch all the previous submissions made by the user.  <a href="#aa7ef34f69b3ff02e95b423abbc796d4d">More...</a><br /></td></tr>
+<tr class="memdesc:aa7ef34f69b3ff02e95b423abbc796d4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is used to fetch all the previous submissions made by a user.  <a href="#aa7ef34f69b3ff02e95b423abbc796d4d">More...</a><br /></td></tr>
 <tr class="separator:aa7ef34f69b3ff02e95b423abbc796d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -142,8 +142,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>User can upload a file. </p>
-<p>This is where the core logic is applied.</p>
+<p>Contents of a compressed file uploaded by the user are extracted and checked for cases of copying. </p>
+<p>The program generates outputs in a csv file and a colormap in the form of a similarity matrix User can download the csv file.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">request</td><td>HTTP request </td></tr>
@@ -253,7 +253,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This is used to fetch all the previous submissions made by the user. </p>
+<p>This is used to fetch all the previous submissions made by a user. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">request</td><td>HTTP request </td></tr>

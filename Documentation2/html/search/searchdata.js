@@ -5,8 +5,7 @@ var indexSectionsWithContent =
   2: "fmtv",
   3: "fmrtv",
   4: "cdefghlmpst",
-  5: "fmor",
-  6: "r"
+  5: "fmor"
 };
 
 var indexSectionNames =
@@ -16,8 +15,7 @@ var indexSectionNames =
   2: "namespaces",
   3: "files",
   4: "functions",
-  5: "variables",
-  6: "pages"
+  5: "variables"
 };
 
 var indexSectionLabels =
@@ -27,7 +25,6 @@ var indexSectionLabels =
   2: "Namespaces",
   3: "Files",
   4: "Functions",
-  5: "Variables",
-  6: "Pages"
+  5: "Variables"
 };
 

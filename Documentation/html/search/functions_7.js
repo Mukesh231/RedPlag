@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['login_5fview',['login_view',['../namespaceaccounts_1_1views.html#a0a25b69b643898258e73017916f30cc1',1,'accounts::views']]],
-  ['logout_5fview',['logout_view',['../namespaceaccounts_1_1views.html#a873a3529127ee3773d1dda25e312fe64',1,'accounts::views']]]
+  ['main',['main',['../namespacemanage.html#afd5b00260cc364aa5bde07e227c6ea78',1,'manage.main()'],['../namespacetesting.html#a4021b566b881e627180c395b28a8c8db',1,'testing.main()']]]
 ];
