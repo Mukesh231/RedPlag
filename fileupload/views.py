@@ -6,7 +6,7 @@ import zipfile
 import shutil
 import numpy as np
 import matplotlib
-import matplotlib.pyplot as plt,mpld3
+import matplotlib.pyplot as plt
 from django.utils import timezone
 from django.shortcuts import render
 from rest_framework.parsers import MultiPartParser, FormParser
@@ -24,6 +24,9 @@ from django.http import Http404
 def form_upload(request):
     """!
     Uploading and running the program.
+
+    @param request
+    @return ????????
     
     
     
@@ -44,13 +47,10 @@ def form_upload(request):
                         #print(info_list)
                         for info in info_list:
                             spl=info.filename.split('/')
-                            info.filename=request.user.username+'_'+str(time.strftime("%Y%m%d%H%M%S"))+'/'+spl[0]
-                            if len(spl)==2:
-                                info.filename+=spl[1]
-                        path_dir=request.user.username+'_'+str(time.strftime("%Y%m%d%H%M%S"))+'/'
+                            info.filename=spl[0]+''+request.user.username+''+str(timezone.now().strftime("%Y%m%d%H%M%S"))+'/'+spl[1]
+                        path_dir=info_list[0].filename
                         zip_file.extractall(members=info_list,path=settings.UPLOAD_ROOT)
                 except Exception as e:
-                    print(e)
                     return render(request, 'home.html', {'msg': 'Please try uploading again'})
             
                 
@@ -68,16 +68,16 @@ def form_upload(request):
                 temporary_inp2="cp results.csv ./media/"+ newfilename
 
                 os.system(temporary_inp2)
-                f=open('results.csv')
+                f=open(os.path.join(settings.BASE_DIR,'results.csv'))
                 titles=f.readline().split(',')[1:]
-                data=np.genfromtxt('results.csv', delimiter=',')
+                data=np.genfromtxt(os.path.join(settings.BASE_DIR,'results.csv'), delimiter=',')
                 data=np.delete(data,(0),axis=0)
                 data=np.delete(data,(0),axis=1)
                 data=np.around(data,2)
 
                 fig= plt.figure(figsize=(16,12)) 
                 ax = fig.add_subplot(111)
-                im = ax.imshow(data, origin='lower', interpolation='None', cmap='viridis')
+                im = ax.imshow(data, origin='lower', interpolation='None', cmap='viridis_r')
 
                 ax.set_xticks(np.arange(len(titles)))
                 ax.set_yticks(np.arange(len(titles)))
@@ -93,15 +93,15 @@ def form_upload(request):
                                     ha="center", va="center", color='black')
 
                 fig.colorbar(im)
-
                 fig.tight_layout()
-                g=mpld3.fig_to_html(fig)
+                plt.savefig(os.path.join(settings.MEDIA_ROOT,request.user.username+'_'+str(time.strftime("%Y%m%d%H%M%S"))+'.png'))
+                
                 os.remove('results.csv')
                 shutil.rmtree(os.path.join(settings.UPLOAD_ROOT,path_dir))
-                return render(request, 'download.html', {'url': request.build_absolute_uri(url1), 'img':g})
+                return render(request, 'download.html', {'url': request.build_absolute_uri(url1), 'image':os.path.join(settings.MEDIA_ROOT,request.user.username+'_'+str(time.strftime("%Y%m%d%H%M%S"))+'.png')})
     
         else:
-            return render(request, 'home.html', {'msg': 'Please try again'})
+            return render(request, 'home.html', {'msg': 'Please try again' })
 
     else:
         raise Http404("Page Not Found")
