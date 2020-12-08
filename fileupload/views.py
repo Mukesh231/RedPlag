@@ -22,11 +22,15 @@ from django.http import Http404
 @login_required
 def form_upload(request):
     """!
-    User can upload a file. This is where the core logic is applied.
+    Contents of a compressed file uploaded by the user are extracted and checked for cases of copying.
+    The program generates outputs in a csv file and a colormap in the form of a similarity matrix
+    User can download the csv file.
+    
     @param request HTTP request
     @return render() function which creates the HttpResponse that is sent back to the browser
 
     """
+
     if request.method=="POST":
         form=FileUploadForm(request.POST, request.FILES)
         time=timezone.now()
@@ -102,12 +106,12 @@ def form_upload(request):
 @login_required
 def prev_uploads(request):
     """!
-    This is used to fetch all the previous submissions made by the user.
+    This is used to fetch all the previous submissions made by a user.
     
     @param request HTTP request
     @return render() function which creates the HttpResponse that is sent back to the browser
-      
     
     """
+    
     queryset=FILE.objects.filter(user=request.user)
     return render(request, 'prev.html', {'obj':queryset})
