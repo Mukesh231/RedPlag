@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['templates',['TEMPLATES',['../namespace_red_plag_1_1settings.html#ac40d9007805a55d6645d7a315fcae8f9',1,'RedPlag::settings']]],
-  ['time_5fzone',['TIME_ZONE',['../namespace_red_plag_1_1settings.html#ae1faf586deb6a5bcba36a73bc52fd9e4',1,'RedPlag::settings']]],
-  ['timestamp',['timestamp',['../classfileupload_1_1models_1_1_f_i_l_e.html#ab89d07af313d64467098900449767bf6',1,'fileupload::models::FILE']]]
+  ['secret_5fkey',['SECRET_KEY',['../namespace_red_plag_1_1settings.html#af757cd13a0772dafb0c174cefbac2dad',1,'RedPlag::settings']]],
+  ['static_5froot',['STATIC_ROOT',['../namespace_red_plag_1_1settings.html#ac567ca6e076e9ffc28129f360a605065',1,'RedPlag::settings']]],
+  ['static_5furl',['STATIC_URL',['../namespace_red_plag_1_1settings.html#afa97473fd4211cd1d557c45553fc54b8',1,'RedPlag::settings']]],
+  ['staticfiles_5fdirs',['STATICFILES_DIRS',['../namespace_red_plag_1_1settings.html#a1552f999bd988e4173b542a5b397a096',1,'RedPlag::settings']]]
 ];

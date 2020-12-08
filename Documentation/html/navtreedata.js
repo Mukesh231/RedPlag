@@ -15,8 +15,8 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
@@ -28,7 +28,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_red_plag_2____init_____8py.html"
+"_red_plag_2____init_____8py.html",
+"class_fetch_and_process_from_disk.html#a916b6569421a5e9f728f129d24054178",
+"savyasach__20201208111326_2javatests_8__06_8java.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

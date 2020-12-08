@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['secret_5fkey',['SECRET_KEY',['../namespace_red_plag_1_1settings.html#af757cd13a0772dafb0c174cefbac2dad',1,'RedPlag::settings']]],
-  ['static_5froot',['STATIC_ROOT',['../namespace_red_plag_1_1settings.html#ac567ca6e076e9ffc28129f360a605065',1,'RedPlag::settings']]],
-  ['static_5furl',['STATIC_URL',['../namespace_red_plag_1_1settings.html#afa97473fd4211cd1d557c45553fc54b8',1,'RedPlag::settings']]],
-  ['staticfiles_5fdirs',['STATICFILES_DIRS',['../namespace_red_plag_1_1settings.html#a1552f999bd988e4173b542a5b397a096',1,'RedPlag::settings']]]
+  ['root_5furlconf',['ROOT_URLCONF',['../namespace_red_plag_1_1settings.html#ad8a1620273d183bb90289e3783582bb0',1,'RedPlag::settings']]],
+  ['rotation',['rotation',['../namespacetest.html#a55eb9455ed3c09614be90a7fbcb4e039',1,'test']]],
+  ['rotation_5fmode',['rotation_mode',['../namespacetest.html#a430369e8aa5449a28f2e0bf35c0488f6',1,'test']]],
+  ['rounding',['rounding',['../namespacetesting.html#ae45c5c1db1adaacd201626e7233dabe0',1,'testing']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['views_2epy',['views.py',['../accounts_2views_8py.html',1,'(Global Namespace)'],['../fileupload_2views_8py.html',1,'(Global Namespace)']]]
+  ['urls_2epy',['urls.py',['../fileupload_2urls_8py.html',1,'(Global Namespace)'],['../_red_plag_2urls_8py.html',1,'(Global Namespace)']]]
 ];

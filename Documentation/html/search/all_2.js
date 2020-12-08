@@ -13,6 +13,7 @@ var searchData=
   ['apps_2epy',['apps.py',['../accounts_2apps_8py.html',1,'(Global Namespace)'],['../fileupload_2apps_8py.html',1,'(Global Namespace)']]],
   ['asgi_2epy',['asgi.py',['../asgi_8py.html',1,'']]],
   ['auth_5fpassword_5fvalidators',['AUTH_PASSWORD_VALIDATORS',['../namespace_red_plag_1_1settings.html#a4f823b3c3ae8dd60a70533535ddaeedc',1,'RedPlag::settings']]],
+  ['ax',['ax',['../namespacetest.html#a8cd1eb128c8b60514b90dfa5e89ff843',1,'test']]],
   ['forms',['forms',['../namespaceaccounts_1_1forms.html',1,'accounts']]],
   ['migrations',['migrations',['../namespaceaccounts_1_1migrations.html',1,'accounts']]],
   ['models',['models',['../namespaceaccounts_1_1models.html',1,'accounts']]],
