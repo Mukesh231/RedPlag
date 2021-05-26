@@ -1,6 +1,4 @@
-# Our Work:
-
-For this project, we have built a web based application to detect plagiarism when provided with a set of text documents.
+A web based application to detect plagiarism within a set of text documents.
 
 ## UI and user authentication
 
